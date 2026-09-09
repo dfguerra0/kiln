@@ -15,7 +15,7 @@ jobs:
           python-version: '3.12'
       - name: Run coarse research
         run: |
-          sed -i 's/cfgs(n=4000)/cfgs(n=1000)/; s/configs.:4000/configs.:1000/' research/tomtrades_cbr_15m.py
+          sed -i 's/cfgs(n=4000)/cfgs(n=1000)/' research/tomtrades_cbr_15m.py
           python research/tomtrades_cbr_15m.py
       - uses: actions/upload-artifact@v4
         with:
